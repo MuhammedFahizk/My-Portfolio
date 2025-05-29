@@ -94,8 +94,8 @@ function App() {
         scrollTrigger: {
           trigger: ".contact",
           scrub: true,
-          start: "top 50%", // 🔥 Contact now waits for Portfolio to fully exit
-          end: "bottom 60%",
+          start: "top 100%", // 🔥 Contact now waits for Portfolio to fully exit
+          end: "bottom 100%",
           toggleActions: "restart pause reverse pause",
           // markers: true,
         },
@@ -117,7 +117,7 @@ function App() {
           {/* <div className=" h-[200px] ">
           </div> */}
         </div>
-        <div className="contact py-10 overflow-hidden">
+        <div className="contact h-full  py-10     p-2 top-10 md:top-10 ">
           <Contacts />
         </div>
       </Background>

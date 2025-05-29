@@ -4,9 +4,10 @@ import { ContactInformation, ContactForm } from '../components'
 
 export const Contacts = () => {
   return (
-    <div className='   bg-lightS dark:bg-darkS grid  md:grid-cols-3  rounded-4xl h-[500px]   '>
-          <ContactInformation/>
-          <ContactForm/>
-    </div>
+    <div className='flex flex-col-reverse  md:grid md:grid-cols-5 lg:grid-cols-3  bg-lightS dark:bg-darkS h-full min-h-[500px] rounded-4xl'>
+  <ContactInformation />
+  <ContactForm />
+</div>
+
   )
 }

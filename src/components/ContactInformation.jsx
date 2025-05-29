@@ -3,14 +3,14 @@ import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 export const ContactInformation = () => {
   return (
-    <div className="grid-cols-1 flex flex-col items-center relative bg-emerald-300  dark:bg-emerald-400 shadow-lg rounded-4xl p-5 px-10 overflow-hidden">
+    <div className=" col-span-2 lg:col-span-1  flex h-fit text-center   md:h-full  flex-col items-center relative bg-emerald-300  dark:bg-emerald-400 shadow-lg rounded-4xl p-5 px-10 overflow-hidden">
       <h1 className="text-4xl font-Acme text-white">Contact Information</h1>
-      <p className="text-center text-sm font-Fira text-lightS  mb-4">
+      <p className="text-center text-xs lg-text-sm font-Fira text-lightS  mb-4">
         Feel free to reach out for collaborations, project inquiries, or just to
         say hello!
       </p>
 
-      <div className="flex flex-col h-1/3 items-start p-2 justify-around text-white text-sm font-Nunito">
+      <div className="flex flex-col gap-3.5 z-50 h-1/3 items-start p-2 justify-around text-white text-sm font-Nunito">
         <a
           href="mailto:fahizk100@gmail.com"
           className="flex items-center gap-2 hover:underline"

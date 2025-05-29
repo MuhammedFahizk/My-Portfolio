@@ -67,5 +67,18 @@
 
 
 
-
+  .triangle {
+    width: 27px;
+    height: 36px;
+    
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: background-color 0.3s ease;
+  }
+  
+  .triangle:hover {
+    background-color: #e03c2c;
+  }
   

@@ -53,7 +53,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="col-span-2 relative overflow-hidden h-full flex flex-col w-full p-6 text-center">
+    <div className="col-span-2    relative overflow-hidden h-fit md:h-full md:col-span-3  lg:col-span-2  flex flex-col w-full p-3 text-center">
       <div>
         <h2 className="text-2xl font-Acme text-gray-800 dark:text-gray-100">
           Send a Message
@@ -65,9 +65,9 @@ export const ContactForm = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="py-4 gap-4 flex flex-col"
+        className="py-4 gap-4 flex  h-full  justify-center flex-col"
       >
-        <div className="flex w-full justify-between gap-2">
+        <div className="flex w-full lg:flex-row  flex-col  justify-between gap-2">
           {/* Name Field */}
           <div className="w-full">
             <TextInput

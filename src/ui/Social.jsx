@@ -48,7 +48,7 @@ export const Social = () => {
           <a
             key={index}
             href={href}
-            className="p-1 sm:p-1  bg-neutral text-base-100 rounded-full hover:bg-primary transition duration-300 cursor-pointer"
+            className="p-1 sm:p-1  bg-neutral text-base-100 rounded-full hover:bg-lightS  bg-light   transition duration-300 cursor-pointer"
             aria-label={label}
             {...(external
               ? { target: "_blank", rel: "noopener noreferrer" }
@@ -65,9 +65,9 @@ export const Social = () => {
 
         <a
           href="https://www.fahizk.com/"
-          className="p-1 px-2 sm:p-1 text-xs bg-neutral text-primary  rounded-full hover:text-white hover:bg-primary transition"
+          className="p-5 px-4  sm:p-1 text-xs bg-neutral text-primary  rounded-full  hover:bg-light  transition"
         >
-          fahizk100@gmail.com
+          &nbsp; fahizk100@gmail.com &nbsp;
         </a>
       </div>
     </>

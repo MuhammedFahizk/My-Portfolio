@@ -62,7 +62,7 @@ export const Portfolio = () => {
         },
       ];
   return (
-    <div className=' h-fit   bg-light rounded-4xl  px-1 py-6  dark:bg-dark w-full md:px-20 md:py-10 '>
+    <div className=' h-fit   bg-light rounded-4xl  px-1 py-6  dark:bg-dark w-full md:px-4 lg:px-20 md:py-10 '>
        <div className='  flex flex-col gap-7'>
         <h1 className='text-3xl font-bold text-center text-dark dark:text-light'>
         Things I've Worked on, Some of Them
