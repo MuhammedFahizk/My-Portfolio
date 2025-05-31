@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContactInformation, ContactForm } from '../components'
+import { ContactInformation, ContactForm } from '../components/Index'
 
 
 export const Contacts = () => {
