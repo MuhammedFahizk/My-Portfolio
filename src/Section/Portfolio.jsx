@@ -4,7 +4,7 @@ import { Project } from '../ui/Index';
 export const Portfolio = () => {
     const projects = [
         {
-          image: "/public/Images/ChatHive.png",
+          image: "/Images/ChatHive.png",
           title: "Chat Hive",
           subHead:"A  social media Application",
           description:
@@ -25,7 +25,7 @@ export const Portfolio = () => {
           },
         },
         {
-          image: "/public/Images/DriveWave.png",
+          image: "/Images/DriveWave.png",
           title: "Drive Wave",
           subHead: "A car rental application",
           description:
@@ -39,7 +39,7 @@ export const Portfolio = () => {
           },
         },
         {
-          image: "/public/Images/SpotifyClone.png",
+          image: "/Images/SpotifyClone.png",
           title: "Spotify Clone",
           subHead: "A music streaming application",
           description:

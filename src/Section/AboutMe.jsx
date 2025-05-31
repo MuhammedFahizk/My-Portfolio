@@ -14,7 +14,7 @@ export const AboutMe = () => {
 
     {/* Profile Image */}
     <img
-      src="public/images/profile3.png"
+      src="/Images/profile3.png"
       className="absolute w-[380px]  h-[430px] object-cover -top-8 z-20"
       alt="Profile"
     />

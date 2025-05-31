@@ -86,7 +86,7 @@ const Home = () => {
       <div>
       <div className="flex borderBox relative ps-5 l:ps-0 w-full justify-center top-0  dark:border-light border-gray-700 overflow-hidden h-[500px]">
         <img
-          src="/public/Images/profile_black.png"
+          src="/Images/profile_black.png"
           alt="M Fahiz"
           className="w-88 profileImage sm:w-80 md:w-full md:absolute z-50 max-w-md object-cover  drop-shadow-2xl filter:drop-shadow()"
         />
