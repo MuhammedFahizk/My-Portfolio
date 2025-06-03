@@ -54,14 +54,14 @@ export const ContactForm = () => {
 
   return (
     <div className="col-span-2    relative overflow-hidden h-fit md:h-full md:col-span-3  lg:col-span-2  flex flex-col w-full p-3 text-center">
-      <div>
+      {/* <div>
         <h2 className="text-2xl font-Acme text-gray-800 dark:text-gray-100">
           Send a Message
         </h2>
         <p className="font-Fira text-sm">
           Any question or remarks? Just write us a message.
         </p>
-      </div>
+      </div> */}
 
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -134,7 +134,7 @@ export const ContactForm = () => {
 
         <Button
           type="submit"
-          className="bg-[#8ae9b6e2] dark:bg-[#63cd94] cursor-pointer hover:bg-[#63cd94] dark:hover:bg-[#8ae9b6e2]"
+          className=" bg-secondary dark:bg-secondary  cursor-pointer hover:bg-[#63cd94] dark:hover:bg-[#8ae9b6e2]"
           disabled={loading}
         >
           {loading ? (

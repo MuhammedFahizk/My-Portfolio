@@ -5,13 +5,13 @@ import { Background } from "./ui/Index";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Portfolio } from "./Section/Portfolio";
-import { Contacts } from "./Section/Contacts";
+import { Footer } from "./Section/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useGSAP(() => {
-    // Pinning sections for smooth scrolling
+    // Pinning for Home
     ScrollTrigger.create({
       trigger: ".home",
       start: "top top",
@@ -20,6 +20,7 @@ function App() {
       pinSpacing: false,
     });
 
+    // Pinning for About
     ScrollTrigger.create({
       trigger: ".about",
       start: "top top",
@@ -28,22 +29,13 @@ function App() {
       pinSpacing: false,
     });
 
+    // Pinning for Portfolio
     ScrollTrigger.create({
       trigger: ".portfolio",
       start: "top top",
-      end: "bottom 90%", // 🔥 Portfolio unpins only after full scroll
-      // pin: true,
-      pinSpacing: false,
-      // markers: true,
-    });
-
-    ScrollTrigger.create({
-      trigger: ".contact",
-      start: "top top", // 🔥 Contact starts only after portfolio is fully gone
-      end: "bottom 50%",
+      end: "bottom 90%",
       pin: true,
-      // pinSpacing: true,
-      // markers: true,
+      pinSpacing: true,
     });
 
     // Fade-in effect for About section
@@ -82,22 +74,20 @@ function App() {
       }
     );
 
-    
+    // ✅ Fade-in effect for Footer section (no pin!)
     gsap.fromTo(
-      ".contact",
-      { opacity: 0, x: 200 },
+      ".footer",
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
-        x: 0,
+        y: 0,
         duration: 1.5,
         ease: "power2.inOut",
         scrollTrigger: {
-          trigger: ".contact",
-          scrub: true,
-          start: "top 100%", // 🔥 Contact now waits for Portfolio to fully exit
-          end: "bottom 100%",
-          toggleActions: "restart pause reverse pause",
-          // markers: true,
+          trigger: ".footer",
+          start: "top 90%",
+          end: "top 60%",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -106,19 +96,17 @@ function App() {
   return (
     <>
       <Background>
-        <div className="home ">
+        <div className="home">
           <Home />
         </div>
-        <div className="about  ">
+        <div className="about">
           <AboutMe />
         </div>
         <div className="portfolio">
           <Portfolio />
-          {/* <div className=" h-[200px] ">
-          </div> */}
         </div>
-        <div className="contact h-full  py-10     p-2 top-10 md:top-10 ">
-          <Contacts />
+        <div className="footer">
+          <Footer />
         </div>
       </Background>
     </>

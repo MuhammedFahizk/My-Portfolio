@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const contactLinks = [
   {
@@ -47,69 +48,180 @@ export const Social = () => {
   const emailRef = useRef(null);
   const scrollRef = useRef(null);
   const centerRef = useRef(null);
+  const linksRef = useRef(null);
+  const hrRef = useRef(null);
 
-useGSAP(() => {
-  const tl = gsap.timeline();
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  // Step 1: Animate center div ("Welcome") appearing
-  tl.fromTo(
-  centerRef.current,
-  {
-    opacity: 0,
-    width: 10,
-    height: 10,
-    padding: 0,
-    borderRadius: "9999px",
-  },
-  {
-    opacity: 1,
-    width: "auto",      
-    height: "auto",
-    padding: " 0.75rem", 
-    borderRadius: "0.5rem",   
-    duration: 1,
-    ease: "power2.out",
-  }
-)
-
-
-    // Step 2: Hold it visible for 1 second
-    .to(centerRef.current, { duration: 1 })
-
-    // Step 3: Animate email and scroll indicators into view
-    .fromTo(
-      emailRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
-      "<" // parallel with previous
-    )
-    .fromTo(
-      scrollRef.current,
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
-      "<"
+    // Step 1: Animate center div ("Welcome") appearing
+    tl.fromTo(
+      centerRef.current,
+      {
+        opacity: 0,
+        width: 10,
+        height: 10,
+        padding: 0,
+        borderRadius: "9999px",
+      },
+      {
+        opacity: 1,
+        width: "auto",
+        height: "auto",
+        padding: " 0.75rem",
+        borderRadius: "0.5rem",
+        duration: 1,
+        ease: "power2.out",
+      }
     )
 
-    // Step 4: Fade out and hide "Welcome" only after other animations
-    .to(centerRef.current, {
-      opacity: 0,
-      duration: 0.5,
-      onComplete: () => {
-        centerRef.current.style.display = "none";
+      // Step 2: Hold it visible for 1 second
+      .to(centerRef.current, { duration: 1 })
+
+      // Step 3: Animate email and scroll indicators into view
+      .fromTo(
+        emailRef.current,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+        "<" // parallel with previous
+      )
+      .fromTo(
+        scrollRef.current,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+        "<"
+      )
+
+      // Step 4: Fade out and hide "Welcome" only after other animations
+      .to(centerRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          centerRef.current.style.display = "none";
+        },
+      });
+
+    // Falling animation for each social icon on load
+    gsap.utils.toArray(".falling-element").forEach((element) => {
+      const startY = gsap.utils.random(-100, -20) + "%";
+      const duration = gsap.utils.random(1.2, 2.5);
+      const delay = gsap.utils.random(0, 0.5);
+
+      gsap.from(element, {
+        y: startY,
+        opacity: 0,
+        duration,
+        delay,
+        ease: "power2.out",
+      });
+    });
+
+    ScrollTrigger.create({
+      trigger: ".footer",
+      start: "top top",
+      end: "bottom bottom",
+      onEnter: () => {
+        if (!linksRef.current) return;
+
+        const icons = gsap.utils.toArray(".falling-element");
+
+        const tl = gsap.timeline({
+          onComplete: () => {
+            // Switch layout to row after animation finishes
+            linksRef.current.classList.remove("flex-col");
+            linksRef.current.classList.add("flex-row");
+            if (hrRef.current) {
+              hrRef.current.style.display = "none";
+            }
+          },
+        });
+
+        // Step 1: Prepare container (width animation for visual smoothness)
+        tl.to(
+          linksRef.current,
+          {
+            width: "auto",
+            duration: 0.5,
+            ease: "power1.out",
+          },
+          0
+        );
+
+        // Step 2: Drop icons with bounce and natural delay
+        tl.to(
+          icons,
+          {
+            y: 130,
+            x: () => gsap.utils.random(-40, 40) + "%",
+            rotation: () => gsap.utils.random(-20, 20),
+            duration: 1.2,
+            ease: "bounce.out", // <- bounce like it's landing
+            stagger: {
+              amount: 0.5,
+              from: "start",
+            },
+          },
+          0.1 // small delay after layout change
+        );
+
+        // Step 3: Add a quick "squash and stretch" impact effect
+        tl.to(
+          icons,
+          {
+            scaleY: 0.9,
+            scaleX: 1.1,
+            duration: 0.15,
+            ease: "power1.inOut",
+            yoyo: true,
+            repeat: 1,
+            stagger: 0.05,
+          },
+          "-=0.6" // overlaps with bounce to simulate impact
+        );
+      },
+
+      onLeaveBack: () => {
+        if (!linksRef.current) return;
+
+        // Switch flex direction back to column immediately
+        linksRef.current.classList.remove("flex-row");
+        linksRef.current.classList.add("flex-col");
+hrRef.current.style.display = "block";
+
+        // Reset container width
+        gsap.to(linksRef.current, {
+          width: "auto",
+          duration: 2,
+          ease: "power1.out",
+        });
+
+        // Reset icons position and rotation
+        gsap.to(".falling-element", {
+          y: 0,
+          x: 0,
+          opacity: 1,
+          rotation: 0,
+          scale: 1,
+          duration: 2,
+          ease: "power2.out",
+          stagger: 0.05,
+        });
       },
     });
-}, []);
-
+  }, []);
 
   return (
     <>
       {/* Left Side Social Icons */}
-      <Div className="z-40 w-fit fixed dark:text-light bottom-40 left-2 md:left-10 flex flex-col gap-2">
+      <div
+        ref={linksRef}
+        className="links z-40 w-fit fixed dark:text-light bottom-40 left-2 md:left-10 flex flex-col gap-y-4"
+      >
         {contactLinks.map(({ href, label, icon, external }, index) => (
           <a
             key={index}
             href={href}
-            className="p-1 sm:p-1 bg-neutral text-base-100 rounded-full hover:bg-primary transition duration-300 cursor-pointer"
+            className="falling-element p-1 sm:p-1 bg-neutral text-base-100 rounded-full  hover:bg-light   transition duration-300 cursor-pointer"
             aria-label={label}
             {...(external
               ? { target: "_blank", rel: "noopener noreferrer" }
@@ -118,8 +230,11 @@ useGSAP(() => {
             <div>{icon}</div>
           </a>
         ))}
-        <hr className="absolute rotate-90 -bottom-12 -left-6.5 w-20 text-primary" />
-      </Div>
+        <hr
+          ref={hrRef}
+          className="absolute rotate-90 -bottom-12 -left-6.5 w-20 text-primary"
+        />
+      </div>
 
       {/* Final Email Location */}
 
