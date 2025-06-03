@@ -14,7 +14,7 @@ export const Nav = () => {
     <Div className="fixed px-4 md:ps-10 pe-5 z-50 h-14 w-full ">
       <div className="flex justify-between items-center h-full">
         {/* Brand Name */}
-        <h3 className="text-primary text-lg font-Acme">Fahiz-k</h3>
+        <h3 className="text-primary text-lg font-Acme"><span className='text-secondary font-Bubblegum text-3xl'>F</span>ahiz-k</h3>
 
         {/* Navigation Links */}
         <div className="flex space-x-4">
@@ -22,7 +22,7 @@ export const Nav = () => {
             <a
               key={index}
               href={link.href}
-              className="text-md text-gray-500 font-Acme hover:text-gray-600"
+              className="text-md text-secondary font-Acme hover:text-gray-600"
             >
               {link.name}
             </a>

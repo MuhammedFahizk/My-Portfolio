@@ -79,28 +79,28 @@ const Home = () => {
   
 
   return (
-    <div className="home w-full relative md:grid md:grid-cols-2 py-10 items-center justify-center px-0 lg:px-20">
+    <div className="home w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-10 items-center justify-center px-0 lg:px-20">
       <HomeLeft/>
 
       {/* Right Side - Image */}
       <div>
-      <div className="flex borderBox relative ps-5 l:ps-0 w-full justify-center top-0  dark:border-light border-gray-700 overflow-hidden h-[500px]">
+      <div className="flex borderBox   relative ps-5 l:ps-0 w-full  justify-center top-0  dark:border-light border-gray-700 overflow-hidden md:h-[500px]">
         <img
           src="/Images/profile_black.png"
           alt="M Fahiz"
-          className="w-88 profileImage sm:w-80 md:w-full md:absolute z-50 max-w-md object-cover  drop-shadow-2xl filter:drop-shadow()"
+          className="w-88 profileImage sm:w-80 md:w-full md:absolute z-40 max-w-md object-cover  drop-shadow-2xl filter:drop-shadow()"
         />
         {/* Blob - floating effect */}
         <div
           ref={blobRef}
-          className="blob hidden lg:block w-[380px] h-[380px] lg:w-[450px] lg:h-[450px] absolute bottom-5 lg:-bottom-30"
+          className="blob  w-[400px] h-[450px] lg:w-[450px] lg:h-[450px] absolute -bottom-14 lg:-bottom-30"
         ></div>
 
         {/* Magic Patterns - pulsing effect */}
-        <div
+        {/* <div
           ref={(el) => (magicPatternRefs.current[0] = el)}
           className="magicpattern block z-40 lg:hidden w-[600px] h-[450px] absolute top-30"
-        ></div>
+        ></div> */}
 
         {/* <div
           ref={(el) => (magicPatternRefs.current[1] = el)}

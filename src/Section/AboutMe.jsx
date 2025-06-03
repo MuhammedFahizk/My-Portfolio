@@ -21,7 +21,7 @@ export const AboutMe = () => {
   </div>
 
   {/* Right Section - Text Content */}
-  <div className="rounded-3xl col-span-3  flex flex-col justify-center items-start gap-4 p-4 md:p-10 min-h-[500px]">
+  <div className="rounded-3xl col-span-3   flex flex-col justify-center items-start gap-4 p-4 md:p-10 min-h-[500px]">
     <p className="text-sm font-Acme flex gap-2 items-center text-primary">
       <HiArrowLongLeft /> About Me
     </p>

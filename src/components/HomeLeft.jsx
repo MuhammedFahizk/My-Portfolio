@@ -22,14 +22,14 @@ export const HomeLeft = () => {
   const words = text.split(" ");
 
   return (
-    <div className="text-center font-Nunito mx-4 lg:mx-9 md:mx-0 py-2 -bottom-1 w-fit bg-[#20ddeb53] opacity-55 backdrop-blur-xl md:bg-transparent rounded-xl md:bottom-0 absolute md:relative z-50 md:text-left space-y-1.5 md:space-y-2">
+    <div className="text-center font-Nunito bg-amber-700 h-full md:h-fit   w-full lg:mx-9 md:mx-0 py-2          opacity-55  md:bg-transparent rounded-xl md:bottom-0  md:relative z-50 md:text-left space-y-1.5 md:space-y-2">
       <p className="text-lg text-white md:text-gray-700 md:dark:text-gray-400">
         Hi, My Name Is
       </p>
       <h1 className="font-Acme text-5xl sm:text-7xl text-light md:text-gray-900 dark:text-light">
         M- Fahiz K
       </h1>
-      <p className="dark:text-white text-light font-Nunito md:text-gray-700 md:dark:text-gray-400 flex flex-wrap gap-x-1">
+      <p className="dark:text-white hidden md:block  text-light font-Nunito md:text-gray-700 md:dark:text-gray-400 flex flex-wrap gap-x-1">
         {words.map((word, i) => (
           <span
             key={i}
