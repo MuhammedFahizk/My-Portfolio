@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Portfolio } from "./Section/Portfolio";
 import { Footer } from "./Section/Footer";
+import { ExperienceSection } from "./Section/ExperienceSection";
+import { SecondarySection } from "./Section/secondarySection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,41 +22,19 @@ function App() {
       pinSpacing: false,
     });
 
-    // Pinning for About
-    ScrollTrigger.create({
-      trigger: ".about",
-      start: "top top",
-      end: "bottom top",
-      pin: true,
-      pinSpacing: false,
-    });
+ 
 
     // Pinning for Portfolio
     ScrollTrigger.create({
       trigger: ".portfolio",
       start: "top top",
       end: "bottom 90%",
-      pin: true,
-      pinSpacing: true,
+      // pin: true,
+      // pinSpacing: true,
     });
 
     // Fade-in effect for About section
-    gsap.fromTo(
-      ".about",
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".about",
-          start: "top 80%",
-          end: "top 50%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
+  
 
     // Fade-in effect for Portfolio section
     gsap.fromTo(
@@ -67,6 +47,24 @@ function App() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: ".portfolio",
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Fade-in effect for Experience section
+    gsap.fromTo(
+      ".experience",
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".experience",
           start: "top 80%",
           end: "top 50%",
           toggleActions: "play none none none",
@@ -99,12 +97,14 @@ function App() {
         <div className="home">
           <Home />
         </div>
-        <div className="about">
-          <AboutMe />
-        </div>
+        <SecondarySection/>
+        
         <div className="portfolio">
           <Portfolio />
         </div>
+        {/* <div className="experience">
+          <ExperienceSection />
+        </div> */}
         <div className="footer">
           <Footer />
         </div>
