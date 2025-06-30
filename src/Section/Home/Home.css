@@ -1,0 +1,10 @@
+.bgPattern {
+  background-image: url('/src/assets/SVG/bg-2.svg');
+  background-size: cover;
+  
+}
+
+.dark .bgPattern {
+     background-image: url('/src/assets/SVG/bg-3.svg');
+  background-size: cover;
+}

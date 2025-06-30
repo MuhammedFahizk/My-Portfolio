@@ -14,7 +14,7 @@ export const Background = ({children}) => {
         opacity: 0,
         duration: 1,
         ease: "power2.out",
-        delay: i * 0.1,
+        delay: 1,
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
@@ -35,9 +35,9 @@ export const Background = ({children}) => {
   
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-bl  bg-light   overflow-hidden    dark:bg-dark  dark:text-white ">
+    <div className="relative min-h-screen bg-gradient-to-bl  bg-light   overflow-hidden    dark:bg-dark  dark:text-white  ">
      <Nav/>
-      <div className=" mx-auto md:p-6">{children}</div>
+      <div className=" mx-auto ">{children}</div>
     <Theme/>
     <Social/>
     

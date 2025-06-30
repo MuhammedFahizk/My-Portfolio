@@ -4,7 +4,10 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="z-50 w-full bg-darkS text-white rounded-3xl">
+    <footer style={{
+  backgroundImage: `url('/src/assets/SVG/map.svg')`
+}}
+className="  z-50 w-full bg-darkS text-white  rounded-t-3xl">
       {/* Top Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 h-[400px] p-5 gap-8">
         <div className="col-span-2">

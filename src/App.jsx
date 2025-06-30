@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { AboutMe } from "./Section/AboutMe";
-import Home from "./Section/Home";
+import Home from "./Section/Home/Home";
 import { Background } from "./ui/Index";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +8,8 @@ import { Portfolio } from "./Section/Portfolio";
 import { Footer } from "./Section/Footer";
 import { ExperienceSection } from "./Section/ExperienceSection";
 import { SecondarySection } from "./Section/secondarySection";
+import { TernarySection } from "./sectionGroups/TernarySection";
+import { SkillsSet } from "./Section/SkillsSet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +24,13 @@ function App() {
       pinSpacing: false,
     });
 
- 
+    ScrollTrigger.create({
+      trigger: ".skills-section",
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+    });
 
     // Pinning for Portfolio
     ScrollTrigger.create({
@@ -34,7 +42,6 @@ function App() {
     });
 
     // Fade-in effect for About section
-  
 
     // Fade-in effect for Portfolio section
     gsap.fromTo(
@@ -89,6 +96,8 @@ function App() {
         },
       }
     );
+
+   
   });
 
   return (
@@ -97,17 +106,18 @@ function App() {
         <div className="home">
           <Home />
         </div>
-        <SecondarySection/>
-        
+        <SecondarySection />
+
         <div className="portfolio">
           <Portfolio />
         </div>
-        {/* <div className="experience">
-          <ExperienceSection />
-        </div> */}
         <div className="footer">
-          <Footer />
+          <Footer/>
+          
         </div>
+
+    
+        
       </Background>
     </>
   );
