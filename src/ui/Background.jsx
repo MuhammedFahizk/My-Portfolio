@@ -1,14 +1,11 @@
-import React from 'react'
-import { Nav, Social, Theme } from './Index'
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React from "react";
+import { Nav, Social, Theme } from "./Index";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-export const Background = ({children}) => {
+export const Background = ({ children }) => {
   useGSAP(() => {
-   
-
-
-    gsap.utils.toArray("h1, h2, p").forEach((el, i) => {
+    gsap.utils.toArray("h1, h2, p, a").forEach((el, i) => {
       gsap.from(el, {
         y: 50,
         opacity: 0,
@@ -17,30 +14,23 @@ export const Background = ({children}) => {
         delay: 1,
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           end: "bottom 60%",
           toggleActions: "play none none reverse",
-          scrub: false, 
-          once: false,  
+          scrub: false,
+          once: false,
           delay: i * 0.1,
         },
       });
     });
-    
-
-    
-    
-  },[])
-
-  
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-bl  bg-light   overflow-hidden    dark:bg-dark  dark:text-white  ">
-     <Nav/>
+      <Nav />
       <div className=" mx-auto ">{children}</div>
-    <Theme/>
-    <Social/>
-    
+      <Theme />
+      <Social />
     </div>
-  )
-}
+  );
+};

@@ -151,7 +151,7 @@ export const Social = () => {
         tl.to(
           icons,
           {
-            y: 130,
+            y: 0,
             x: () => gsap.utils.random(-40, 40) + "%",
             rotation: () => gsap.utils.random(-20, 20),
             duration: 1.2,

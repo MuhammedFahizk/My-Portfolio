@@ -5,10 +5,13 @@ import React from "react";
 import { AboutMe } from "./AboutMe"; // Adjust import if needed
 import { Skills } from "./Skills";
 import { Experience } from "./Experience";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const SecondarySection = () => {
+ const SecondarySection = () => {
+
+  const SecondaryRef = useScrollReveal()
   useGSAP(() => {
   // Pinning for About
   ScrollTrigger.create({
@@ -84,7 +87,9 @@ export const SecondarySection = () => {
 
 
   return (
-    <>
+    <div
+    ref={SecondaryRef}
+    >
       <div className="about">
         <AboutMe />
       </div>
@@ -96,6 +101,8 @@ export const SecondarySection = () => {
       <div className="experience ">
         <Experience/>
       </div>
-    </>
+    </div>
   );
 };
+
+export default SecondarySection;
