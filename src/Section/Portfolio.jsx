@@ -2,72 +2,91 @@ import React from 'react'
 import { Project } from '../ui/Index';
 
 export const Portfolio = () => {
-    const projects = [
-        {
-          image: "/Images/ChatHive.png",
-          title: "Chat Hive",
-          subHead:"A  social media Application",
-          description:
-            "A  social media application featuring Socket.IO for seamless communication, with a focus on responsive design and intuitive UI.",
-          technologies: [
-            "React",
-            "Node.js",
-            "Tailwind css",
-            "Socket.IO",
-            "Express",
-            "MongoDB",
-          ],
-          details:
-            " A dynamic social media platform built using the MERN stack (MongoDB, Express, React, Node.js) following the MVC architecture. The platform features secure user authentication via JWT (JSON Web Token) and supports role-based access for admins and users. Users can engage in real-time messaging with Socket.IO, post feeds, share stories, write blogs, and interact through comments and likes. Additionally, users have the ability to report inappropriate content or users and hide posts they do not wish to see. Admins have full control to manage users, posts, reports, and notifications. The website is fully responsive thanks to Tailwind CSS, and ESLint ensures high code quality and consistency throughout the project.",
-          links: {
-            demo: "https://chathivemedia.vercel.app/",
-            repo: "https://github.com/MuhammedFahizk/Social-Media-Frontend",
-          },
-        },
-        {
-          image: "/Images/DriveWave.png",
-          title: "Drive Wave",
-          subHead: "A car rental application",
-          description:
-            "A car rental application built with a Handlebars.js (HBS) frontend, offering secure payment options, efficient booking system, and intuitive user management tools.",
-          technologies: ["Node.js", "MongoDB", "Express", "Razorpay", "Handlebars"],
-          details:
-            "Drive Wave is a car rental website designed to provide a seamless experience for users looking to rent vehicles. Built using modern web technologies such as Node.js, Express, MongoDB, and Handlebars (HBS), Drive Wave offers robust backend management paired with an intuitive user interface, catering to customers, administrators, and vendors. The platform not only allows users to rent cars but also enables third-party car owners to list and manage their vehicles, expanding the range of available options for renters.",
-          links: {
-            demo: "https://www.drivewave.site/",
-            repo: "https://github.com/MuhammedFahizk/drive-Wave",
-          },
-        },
-        {
-          image: "/Images/SpotifyClone.png",
-          title: "Spotify Clone",
-          subHead: "A music streaming application",
-          description:
-            "A music streaming application similar to Spotify, integrated with the Shopify API for showcasing music collections while leveraging a custom database for authentication and user management.",
-          technologies: [
-            "Spotify API",
-            "React",
-            "Tailwind css",
-            "Node.js",
-            "Express",
-            "MongoDB",
-          ],
-          details:
-            "A responsive Spotify frontend clone built using React, featuring seamless integration with Spotify's original API for music-related functionalities such as fetching tracks, albums, and artist details. User authentication and playlist management are handled through a custom backend built with Node.js and Express, using JWT for secure access and refresh tokens for session management. User-generated playlists are stored in a dedicated database, while all music streaming and browsing data are fetched directly from Spotify's API, ensuring a rich and authentic user experience.",
-    
-          links: {
-            demo: "https://track-me-demo.com",
-            repo: "https://github.com/MuhammedFahizk/TrackVoice",
-          },
-        },
-      ];
+   const projects = [
+  {
+    title: "Chat Hive",
+    subtitle: "A Social Media Application",
+    image: "/Images/ChatHive.png",
+    description:
+      "Built a full-featured social media application using the MERN stack with real-time chat using Socket.IO. Focused on responsive UI, intuitive user interactions, and role-based access control with JWT.",
+    responsibilities: [
+      "Implemented real-time messaging and notifications with Socket.IO",
+      "Developed secure authentication using JWT with role-based access",
+      "Built reusable UI components with React and Tailwind CSS",
+      "Managed posts, likes, blogs, comments, and content moderation",
+      "Admin dashboard for managing users, posts, reports, and analytics"
+    ],
+    technologies: [
+      "React", "Node.js", "Tailwind CSS", "Socket.IO", "Express", "MongoDB"
+    ],
+    links: {
+      demo: "https://chathivemedia.vercel.app/",
+      repo: "https://github.com/MuhammedFahizk/Social-Media-Frontend"
+    }
+  },
+  {
+    title: "Drive Wave",
+    subtitle: "A Car Rental Application",
+    image: "/Images/DriveWave.png",
+    description:
+      "Designed and developed a car rental platform using Handlebars for the frontend and a Node.js backend with Razorpay integration. Supports user bookings and third-party vendor listings.",
+    responsibilities: [
+      "Built a multi-role system for users, admins, and vendors",
+      "Integrated Razorpay for secure online payments",
+      "Designed backend using MVC architecture with Express and MongoDB",
+      "Enabled third-party car listing and management features"
+    ],
+    technologies: [
+      "Node.js", "MongoDB", "Express", "Razorpay", "Handlebars"
+    ],
+    links: {
+      demo: "https://www.drivewave.site/",
+      repo: "https://github.com/MuhammedFahizk/drive-Wave"
+    }
+  },
+  {
+    title: "Spotify Clone",
+    subtitle: "A Music Streaming Application",
+    image: "/Images/SpotifyClone.png",
+    description:
+      "Created a responsive Spotify clone using React with Spotify API integration. Included user authentication, custom playlist management, and seamless audio experience.",
+    responsibilities: [
+      "Integrated Spotify API for track, album, and artist retrieval",
+      "Built a custom backend with JWT auth and refresh token handling",
+      "Managed user playlists using MongoDB",
+      "Focused on UX and responsive UI using Tailwind CSS"
+    ],
+    technologies: [
+      "Spotify API", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB"
+    ],
+    links: {
+      demo: "https://track-me-demo.com",
+      repo: "https://github.com/MuhammedFahizk/TrackVoice"
+    }
+  }
+];
+
   return (
     <div className=' h-fit   bg-light rounded-4xl  px-1 py-6  dark:bg-dark w-full md:px-4 lg:px-20 md:py-10 '>
        <div className='  flex flex-col gap-7'>
-        <h1 className='text-3xl font-bold text-center text-dark dark:text-light'>
+        {/* <h1 className='text-3xl font-bold text-center text-dark dark:text-light'>
         Things I've Worked on, Some of Them
 
+        </h1> */}
+        <div className="col-span-2 z-50 relative justify-center py-10 items-center bg-transparent flex opacity-55 flex-col   h-full">
+        <h1 className="text-4xl md:text-7xl lg:text-[6rem] me-auto italic font-Acme text-gray-900 dark:text-light  ">
+           Things I've Worked on
         </h1>
+        <h1
+          className="text-3xl md:text-6xl md:-mt-12 -mt-4  lg:text-[5rem] ms-auto italic font-Bubblegum text-transparent"
+          style={{
+            WebkitTextStroke: "2px #e07a5f",
+            color: "transparent",
+          }}
+        >
+          Some of Them ... 
+        </h1>
+      </div>
        {
             projects.map((project, index) => (
                 <Project project={project} key={index} index={index+1} />

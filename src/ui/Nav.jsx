@@ -3,12 +3,12 @@ import { Div } from '../common/Div';
 
 export const Nav = () => {
   // Define an array of navigation links
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About-Us', href: '#about' },
-    { name: 'Service', href: '#service' },
-    { name: 'Portfolio', href: '#portfolio' },
-  ];
+ const navLinks = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammed-fahiz-k/' },
+  { name: 'GitHub', href: 'https://github.com/MuhammedFahizk' },
+  { name: 'Download Resume', href: 'https://drive.google.com/file/d/1QwGigzV3-Hm4cpVbU6_YvnXgYPZnJbwp/view?usp=sharing' },
+];
+
 
   return (
     <Div className="fixed px-4 md:ps-10 pe-5 z-50 h-14 w-full ">

@@ -10,7 +10,7 @@ export const useScrollReveal = () => {
   const containerRef = useRef();
 
   useGSAP(() => {
-    const elements = containerRef.current?.querySelectorAll("h1, h2, p, a");
+    const elements = containerRef.current?.querySelectorAll("h1, h2, p, a, span, li");
 
     elements?.forEach((el, i) => {
       gsap.fromTo(

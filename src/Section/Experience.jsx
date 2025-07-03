@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -14,7 +14,7 @@ export const Experience = () => {
       title: "MERN Stack Developer Intern",
       company: "SelfStack",
       location: "Kozhikode, Kerala",
-      duration: "August 2023 – September 2024",
+      duration: "August 2023 – December 2024",
       details: [
         "Developed 30+ mini projects and 2 major projects using the MERN stack.",
         "Optimized RESTful APIs, reducing response times by 30%.",
@@ -24,57 +24,27 @@ export const Experience = () => {
         "Collaborated with designers, QA engineers, and DevOps to ensure seamless feature rollouts.",
       ],
     },
-    {
-      title: "Frontend Developer (Trainer Developer / Team Lead)",
-      company: "GVR Business Transforms",
-      location: "Kochi, Kerala",
-      duration: "October 2023 – December 2023",
-      details: [
-        "Led and mentored junior developers on React.js development and best practices.",
-        "Guided the team on Redux state management and performance optimization.",
-        "Oversaw RESTful API integration and frontend state management for a smooth user experience.",
-        "Ensured cross-browser compatibility and accessibility, improving UI consistency and usability.",
-      ],
-    },
   ];
 
   useGSAP(() => {
-    const cards = cardsRef.current;
+    const isMobile = window.innerWidth < 768;
 
-    cards.forEach((card, index) => {
+    cardsRef.current.forEach((card) => {
       gsap.fromTo(
         card,
-        { x: 800, opacity: 1, zIndex: index+ 10 },
+        isMobile
+          ? { opacity: 0, y: 50 }
+          : { opacity: 0, x: 300 },
         {
-          x: 0,
           opacity: 1,
-          zIndex: index + 10, // Higher z-index to stack on top
-          scrollTrigger: {
-            trigger: ExpcontainerRef.current,
-            start: `top+=${index * 200} center`, // Adjust spacing per card
-            end: "+=100",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
-  useGSAP(() => {
-    const cards = cardsRef.current;
-
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { x: 300, opacity: 1, },
-        {
           x: 0,
-          opacity: 1,
-          zIndex: index + 10, // Higher z-index to stack on top
+          y: 0,
           scrollTrigger: {
-            trigger: ExpcontainerRef.current,
-            start: `top+=${index * 200} center`, // Adjust spacing per card
-            end: "+=100",
-            scrub: true,
+            trigger: card,
+            start: "top 90%",
+            end: "bottom 60%",
+            scrub: false,
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -84,35 +54,32 @@ export const Experience = () => {
   return (
     <div
       ref={ExpcontainerRef}
-      className="relative bg-lightS dark:bg-darkS rounded-4xl overflow-hidden py-2"
-      style={{ height: "120vh" }}
+      className="relative bg-lightS dark:bg-darkS rounded-4xl overflow-hidden py-10 px-4 md:px-10"
     >
-      {/* Background text */}
-      <h1 className="absolute inset-0 flex justify-center items-start -left-130 text-primary-dark dark:text-white/10 text-[7rem] font-Bubblegum opacity-10 -rotate-90 select-none pointer-events-none z-0">
+      {/* Background Label */}
+      <h1 className="absolute inset-0 flex justify-center items-start text-gray-700/10 dark:text-white/10 text-[5rem] md:text-[7rem] font-Bubblegum opacity-10 -rotate-90 select-none pointer-events-none z-0">
         EXPERIENCE
       </h1>
-      
 
-      {/* Flex Container */}
-      <div className="relative w-full h-full flex flex-col md:flex-row justify-between items-center px-6 md:px-10 gap-8 z-10">
-        {/* Illustration */}
+      <div className="relative w-full flex flex-col md:flex-row justify-between items-center gap-10 z-10">
+        {/* Left Illustration */}
         <div className="w-full md:w-1/3 hidden md:block">
           <img
             src="/experience-illustration.png"
-            alt="Experience Illustration"
+            alt="Experience"
             className="w-full h-auto rounded-xl shadow-lg"
           />
         </div>
 
-        {/* Experience Cards */}
-        <div className="w-full md:w-2/3 h-full relative">
+        {/* Cards */}
+        <div className="w-full md:w-2/3 flex flex-col gap-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="absolute top-0 left-0 w-full h-full p-4 sm:p-10 flex flex-col justify-center items-start bg-light dark:bg-dark text-darkS dark:text-white rounded-4xl shadow-lg"
+              className="relative w-full text-center md:text-left bg-light dark:bg-dark text-darkS dark:text-white rounded-3xl p-6 md:p-10 shadow-xl"
             >
-              <h2 className="text-3xl sm:text-4xl font-bold mb-2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
                 {exp.title}
               </h2>
               <p className="text-md text-gray-500 mb-1">
@@ -121,7 +88,7 @@ export const Experience = () => {
               <p className="text-md italic text-gray-500 mb-4">
                 {exp.duration}
               </p>
-              <ul className="list-disc list-inside space-y-2 text-lg max-w-2xl">
+              <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
                 {exp.details.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}

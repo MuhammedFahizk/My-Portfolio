@@ -133,6 +133,7 @@
 // App.js
 import React, { Suspense, lazy } from "react";
 import { Background } from "./ui/Index";
+import HomeSkeleton from "./Section/Home/HomeSkeleton";
 // import { PortfolioGSAP } from "./Loading/PortfolioGSAP";
 // import  Portfolio  from "./Loading/PortfolioGSAP";
 
@@ -146,7 +147,7 @@ const Footer = lazy (() => import ("./Loading/FooterGSAP"))
 function App() {
   return (
     <Background>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<HomeSkeleton/>}>
         <Home />
         <SecondarySection />
         <Portfolio />

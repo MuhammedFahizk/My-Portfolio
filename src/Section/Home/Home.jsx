@@ -44,11 +44,12 @@ const Home = () => {
 
     // 3. Then Profile Image appears
     tl.fromTo(
-      ".profileImage",
-      { opacity: 0, y: 400, scale: 0.5 },
-      { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power1.out" },
-      "-=0.5"
-    );
+  ".profileImage",
+  { opacity: 0, y: 50, scale: 0.95 },
+  { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power2.out" },
+  "-=0.3"
+);
+
 
     // 4. THEN Floating Animations
     tl.add(() => {
@@ -75,7 +76,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-10 items-center justify-center px-0 lg:px-20">
+    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-10 items-center justify-center px-4 lg:px-20">
       <HomeLeft />
 
       {/* Right Side - Image */}
@@ -93,16 +94,7 @@ const Home = () => {
             className="blob  w-[400px] h-[450px] lg:w-[450px] lg:h-[450px] absolute -bottom-14 lg:-bottom-30"
           ></div>
 
-          {/* Magic Patterns - pulsing effect */}
-          {/* <div
-          ref={(el) => (magicPatternRefs.current[0] = el)}
-          className="magicpattern block z-40 lg:hidden w-[600px] h-[450px] absolute top-30"
-        ></div> */}
-
-          {/* <div
-          ref={(el) => (magicPatternRefs.current[1] = el)}
-          className="magicpattern hidden lg:block w-[500px] h-[360px] relative top-25"
-        ></div> */}
+         
         </div>
         <hr className="  heroLine z-50 top-6  h-0.5 w-full border-none  bg-black dark:bg-light " />
       </div>

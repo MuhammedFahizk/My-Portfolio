@@ -14,7 +14,8 @@ const FooterGSAP = () => {
         trigger: footerRef.current,
         start: "top top",
         end: "+=100%",
-        pin: true,
+        pin: false,
+        snap: true,
         pinSpacing: false,
       });
 

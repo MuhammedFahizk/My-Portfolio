@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import { Div } from "../common/Div";
 import {
   FaEnvelope,
@@ -76,7 +76,6 @@ export const Social = () => {
     )
 
       // Step 2: Hold it visible for 1 second
-      .to(centerRef.current, { duration: 1 })
 
       // Step 3: Animate email and scroll indicators into view
       .fromTo(
@@ -102,112 +101,75 @@ export const Social = () => {
       });
 
     // Falling animation for each social icon on load
-    gsap.utils.toArray(".falling-element").forEach((element) => {
-      const startY = gsap.utils.random(-100, -20) + "%";
-      const duration = gsap.utils.random(1.2, 2.5);
-      const delay = gsap.utils.random(0, 0.5);
+    // gsap.utils.toArray(".falling-element").forEach((element) => {
+    //   const startY = gsap.utils.random(-100, -20) + "%";
+    //   const duration = gsap.utils.random(1.2, 2.5);
+    //   const delay = gsap.utils.random(0, 0.5);
 
-      gsap.from(element, {
-        y: startY,
-        opacity: 0,
-        duration,
-        delay,
-        ease: "power2.out",
-      });
-    });
+    //   gsap.from(element, {
+    //     y: startY,
+    //     opacity: 0,
+    //     duration,
+    //     delay,
+    //     ease: "power2.out",
+    //   });
+    // });
 
-    ScrollTrigger.create({
-      trigger: ".footer",
-      start: "top top",
-      end: "bottom bottom",
-      onEnter: () => {
-        if (!linksRef.current) return;
+//  ScrollTrigger.create({
+//   trigger: "#footer-trigger", // This is the marker for the footer
+//   start: "top bottom",         // When top of trigger hits bottom of viewport
+//   end: "bottom bottom",        // Until it scrolls out
+//   onEnter: () => {
+//     if (!linksRef.current) return;
 
-        const icons = gsap.utils.toArray(".falling-element");
+//     const icons = gsap.utils.toArray(".falling-element");
 
-        const tl = gsap.timeline({
-          onComplete: () => {
-            // Switch layout to row after animation finishes
-            linksRef.current.classList.remove("flex-col");
-            linksRef.current.classList.add("flex-row");
-            if (hrRef.current) {
-              hrRef.current.style.display = "none";
-            }
-          },
-        });
+//     // Change layout
+//     linksRef.current.classList.replace("flex-col", "flex-row");
+//     hrRef.current.style.display = "none";
 
-        // Step 1: Prepare container (width animation for visual smoothness)
-        tl.to(
-          linksRef.current,
-          {
-            width: "auto",
-            duration: 0.5,
-            ease: "power1.out",
-          },
-          0
-        );
+//     // Animate icons
+//     const tl = gsap.timeline();
 
-        // Step 2: Drop icons with bounce and natural delay
-        tl.to(
-          icons,
-          {
-            y: 0,
-            x: () => gsap.utils.random(-40, 40) + "%",
-            rotation: () => gsap.utils.random(-20, 20),
-            duration: 1.2,
-            ease: "bounce.out", // <- bounce like it's landing
-            stagger: {
-              amount: 0.5,
-              from: "start",
-            },
-          },
-          0.1 // small delay after layout change
-        );
+//     tl.to(icons, {
+//       y: 0,
+//       x: () => gsap.utils.random(-40, 40) + "%",
+//       rotation: () => gsap.utils.random(-15, 15),
+//       duration: 1.2,
+//       ease: "bounce.out",
+//       stagger: 0.1,
+//     });
 
-        // Step 3: Add a quick "squash and stretch" impact effect
-        tl.to(
-          icons,
-          {
-            scaleY: 0.9,
-            scaleX: 1.1,
-            duration: 0.15,
-            ease: "power1.inOut",
-            yoyo: true,
-            repeat: 1,
-            stagger: 0.05,
-          },
-          "-=0.6" // overlaps with bounce to simulate impact
-        );
-      },
+//     tl.to(icons, {
+//       scaleY: 0.9,
+//       scaleX: 1.1,
+//       duration: 0.2,
+//       ease: "power1.inOut",
+//       yoyo: true,
+//       repeat: 1,
+//       stagger: 0.05,
+//     });
+//   },
 
-      onLeaveBack: () => {
-        if (!linksRef.current) return;
+//   onLeaveBack: () => {
+//     if (!linksRef.current) return;
 
-        // Switch flex direction back to column immediately
-        linksRef.current.classList.remove("flex-row");
-        linksRef.current.classList.add("flex-col");
-hrRef.current.style.display = "block";
+//     linksRef.current.classList.replace("flex-row", "flex-col");
+//     hrRef.current.style.display = "block";
 
-        // Reset container width
-        gsap.to(linksRef.current, {
-          width: "auto",
-          duration: 2,
-          ease: "power1.out",
-        });
+//     gsap.to(".falling-element", {
+//       y: 0,
+//       x: 0,
+//       opacity: 1,
+//       rotation: 0,
+//       scale: 1,
+//       duration: 1,
+//       ease: "power2.out",
+//       stagger: 0.05,
+//     });
+//   },
+// });
 
-        // Reset icons position and rotation
-        gsap.to(".falling-element", {
-          y: 0,
-          x: 0,
-          opacity: 1,
-          rotation: 0,
-          scale: 1,
-          duration: 2,
-          ease: "power2.out",
-          stagger: 0.05,
-        });
-      },
-    });
   }, []);
 
   return (
