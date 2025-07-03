@@ -137,12 +137,12 @@ import HomeSkeleton from "./Section/Home/HomeSkeleton";
 // import { PortfolioGSAP } from "./Loading/PortfolioGSAP";
 // import  Portfolio  from "./Loading/PortfolioGSAP";
 
-const Home = lazy(() => import("./Loading/HomeGSAP"));
-const Portfolio = lazy(() => import("./Loading/PortfolioGSAP"));
-const SecondarySection = lazy(() => import("./Section/secondarySection"));
+const Home = lazy(() => import("./Loading/HomeGSAP.jsx"));
+const Portfolio = lazy(() => import("./Loading/PortfolioGSAP.jsx"));
+const SecondarySection = lazy(() => import("./Section/secondarySection.jsx"));
 // const Portfolio = import("./Loading/PortfolioGSAP");
 // const Footer = lazy(() => import("./Section/Footer"));
-const Footer = lazy (() => import ("./Loading/FooterGSAP"))
+const Footer = lazy (() => import ("./Loading/FooterGSAP.jsx"))
 
 function App() {
   return (
