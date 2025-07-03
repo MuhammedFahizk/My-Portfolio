@@ -139,7 +139,7 @@ import HomeSkeleton from "./Section/Home/HomeSkeleton";
 
 const Home = lazy(() => import("./Loading/HomeGSAP.jsx"));
 const Portfolio = lazy(() => import("./Loading/PortfolioGSAP.jsx"));
-const SecondarySection = lazy(() => import("./Section/secondarySection.jsx"));
+const SecondarySection = lazy(() => import("./Section/SecondarySection.jsx"));
 // const Portfolio = import("./Loading/PortfolioGSAP");
 // const Footer = lazy(() => import("./Section/Footer"));
 const Footer = lazy (() => import ("./Loading/FooterGSAP.jsx"))
