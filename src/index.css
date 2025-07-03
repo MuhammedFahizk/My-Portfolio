@@ -1,19 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Headland+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Headland+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
+:root {
+  --color-cursor: 250, 252, 251;
+  --cursor-outline-shade: 0.3;
+  --cursor-size: 40px;
+  --cursor-outline-size: 12px;
+  --cursor-outline-shade: 0.1;
+}
 
 @theme {
   /* --color-light: #F3F3F3; */
   --color-light: #f8f5e5;
   --color-lightS: #fefbe1;
-  --color-secondary: #286F6C;
+  --color-secondary: #286f6c;
 
   --color-dark: #171717;
   --color-darkS: #1b202c;
@@ -25,6 +32,10 @@
   --font-Bubblegum: "Bubblegum+Sans";
 }
 
+html *,
+body * {
+  cursor: none;
+}
 .blob {
   border-radius: 44% 56% 68% 32% / 79% 77% 23% 21%;
 }
@@ -76,3 +87,33 @@
 .triangle:hover {
   background-color: #e03c2c;
 }
+/* index.css or App.css */
+
+.cursor-dot, .cursor-outline {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+}
+
+.cursor-dot {
+  width: 8px; height: 8px;
+  background: white;
+  z-index: 1000;
+}
+
+.cursor-outline {
+  width: 45px; height: 45px;
+  background: rgba(235,80,80,0.5);
+  z-index: 999;
+}
+
+/* Optional: staggered sizes or colors */
+.cursor-outline:nth-child(2) { width: 35px; height: 35px; background: rgba(235,80,80,0.4); }
+.cursor-outline:nth-child(3) { width: 25px; height: 25px; background: rgba(235,80,80,0.3); }
+.cursor-outline:nth-child(4) { width: 15px; height: 15px; background: rgba(235,80,80,0.2); }
+.cursor-outline:nth-child(5) { width: 10px; height: 10px; background: rgba(235,80,80,0.2); }
+

@@ -91,7 +91,7 @@ const Home = () => {
           {/* Blob - floating effect */}
           <div
             ref={blobRef}
-            className="blob  w-[400px] h-[450px] lg:w-[450px] lg:h-[450px] absolute -bottom-14 lg:-bottom-30"
+            className="blob  w-[400px] h-[450px] lg:w-[450px]  lg:h-[500px] absolute -bottom-14 lg:-bottom-30"
           ></div>
 
          

@@ -147,6 +147,7 @@ const Footer = lazy (() => import ("./Loading/FooterGSAP.jsx"))
 function App() {
   return (
     <Background>
+      
       <Suspense fallback={<HomeSkeleton/>}>
         <Home />
         <SecondarySection />
