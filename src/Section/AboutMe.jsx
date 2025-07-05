@@ -65,12 +65,7 @@ export const AboutMe = () => {
           digital solutions.
         </p>
       </div>
-      <img
-       ref={imageRef}
-        src="/src/assets/SVG/DottedRound.svg"
-        alt="Dot Box"
-        className="absolute bottom-0 right-0 w-[250px] z-40 rotate-0"
-      />
+     
     </div>
   );
 };
