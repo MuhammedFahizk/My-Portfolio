@@ -70,11 +70,11 @@ const Home = () => {
   }, [imageLoaded]);
 
   return (
-    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-10 items-center justify-center px-4 lg:px-20">
+    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-20 items-center justify-center px-4 lg:px-20">
       <HomeLeft />
 
       <div>
-        <div className="flex borderBox   relative ps-5 l:ps-0 w-full  justify-center top-0  dark:border-light border-gray-700 overflow-hidden md:h-[500px]">
+        <div className="flex borderBox   relative ps-5 l:ps-0 w-full  justify-center -top-10 md:top-0  dark:border-light border-gray-700 overflow-hidden  md:h-[500px]">
           {imageLoaded && (
             <img
               src={imageURL}
