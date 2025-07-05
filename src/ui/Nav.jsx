@@ -22,6 +22,8 @@ export const Nav = () => {
             <a
               key={index}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-md text-secondary font-Acme hover:text-gray-600"
             >
               {link.name}

@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Experience = () => {
   const ExpcontainerRef = useRef(null);
   const cardsRef = useRef([]);
+  const projectImageRefs = useRef([]);
 
   const experiences = [
     {
@@ -29,12 +30,11 @@ export const Experience = () => {
   useGSAP(() => {
     const isMobile = window.innerWidth < 768;
 
+    // Animate cards (right side)
     cardsRef.current.forEach((card) => {
       gsap.fromTo(
         card,
-        isMobile
-          ? { opacity: 0, y: 50 }
-          : { opacity: 0, x: 300 },
+        isMobile ? { opacity: 0, y: 50 } : { opacity: 0, x: 300 },
         {
           opacity: 1,
           x: 0,
@@ -44,6 +44,27 @@ export const Experience = () => {
             start: "top 90%",
             end: "bottom 60%",
             scrub: false,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    // Animate project images (left side)
+    projectImageRefs.current.forEach((img, i) => {
+      gsap.fromTo(
+        img,
+        { opacity: 0, y: 40, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          delay: i * 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: img,
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         }
@@ -62,13 +83,32 @@ export const Experience = () => {
       </h1>
 
       <div className="relative w-full flex flex-col md:flex-row justify-between items-center gap-10 z-10">
-        {/* Left Illustration */}
-        <div className="w-full md:w-1/3 hidden md:block">
-          <img
-            src="/experience-illustration.png"
-            alt="Experience"
-            className="w-full h-auto rounded-xl shadow-lg"
-          />
+        <div className="w-full md:w-1/3 hidden md:flex flex-col items-center justify-start gap-6 relative">
+          {[
+            "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703437/SpotifyClone_zrg7bi.png",
+            "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703408/DriveWave_bhbe0n.png",
+            "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703389/ChatHive_wgtmkf.png",
+          ].map((img, i) => {
+            const rotations = [-6, 6, -6];
+            return (
+              <div
+                key={i}
+                ref={(el) => (projectImageRefs.current[i] = el)}
+                className="relative w-[140px] h-[100px] md:w-[180px] md:h-[120px] lg:w-[200px] lg:h-[140px] border-2 border-dark dark:border-light rounded-2xl overflow-hidden shadow-lg transition-transform duration-300"
+                style={{
+                  transform: `rotate(${rotations[i]}deg)`,
+                  zIndex: 10 - i,
+                }}
+              >
+                <img
+                  src={img}
+                  alt={`project-${i}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Cards */}

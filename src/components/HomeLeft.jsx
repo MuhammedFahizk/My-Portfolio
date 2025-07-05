@@ -47,9 +47,13 @@ export const HomeLeft = () => {
 
       <div className="flex gap-4 py-6  justify-center  flex-wrap">
         <a
+
           href="https://drive.google.com/file/d/1QwGigzV3-Hm4cpVbU6_YvnXgYPZnJbwp/view?usp=sharing"
           download
-          className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-100"
+          rel="noopener noreferrer"
+          target="_blank"
+
+          className=" hero flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-100"
         >
           <FaDownload className="text-lg" />
           Download CV
@@ -57,6 +61,8 @@ export const HomeLeft = () => {
 
         <a
           href="tel:9961130563"
+            rel="noopener noreferrer"
+          target="_blank"
           className="  flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300  active:scale-100"
         >
           <BiPhoneCall className="text-lg" />

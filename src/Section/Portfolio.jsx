@@ -6,7 +6,7 @@ export const Portfolio = () => {
   {
     title: "Chat Hive",
     subtitle: "A Social Media Application",
-    image: "/Images/ChatHive.png",
+    image: "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703389/ChatHive_wgtmkf.png",
     description:
       "Built a full-featured social media application using the MERN stack with real-time chat using Socket.IO. Focused on responsive UI, intuitive user interactions, and role-based access control with JWT.",
     responsibilities: [
@@ -27,7 +27,7 @@ export const Portfolio = () => {
   {
     title: "Drive Wave",
     subtitle: "A Car Rental Application",
-    image: "/Images/DriveWave.png",
+    image: "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703408/DriveWave_bhbe0n.png",
     description:
       "Designed and developed a car rental platform using Handlebars for the frontend and a Node.js backend with Razorpay integration. Supports user bookings and third-party vendor listings.",
     responsibilities: [
@@ -47,7 +47,7 @@ export const Portfolio = () => {
   {
     title: "Spotify Clone",
     subtitle: "A Music Streaming Application",
-    image: "/Images/SpotifyClone.png",
+    image: "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703437/SpotifyClone_zrg7bi.png",
     description:
       "Created a responsive Spotify clone using React with Spotify API integration. Included user authentication, custom playlist management, and seamless audio experience.",
     responsibilities: [
