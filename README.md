@@ -12,7 +12,8 @@ It showcases my **MERN stack** skills, featured projects, animations, contact fo
 
 ## 🖼️ Preview
 
-![Portfolio Preview](https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751624299/profile_black-1_nkpjpe.png)
+![Portfolio Preview](https://res.cloudinary.com/dnqx8sqdw/image/upload/w_700,h_600,c_fill/v1751624299/profile_black-1_nkpjpe.png)
+
 
 ---
 
@@ -34,6 +35,7 @@ It showcases my **MERN stack** skills, featured projects, animations, contact fo
 - 🌈 **Flowbite React** (components)
 
 ---
+
 
 ## 📦 Installation & Setup
 
@@ -85,5 +87,11 @@ See the LICENSE file for more details.
 
 ## 🙌 Connect with Me
 
+
+```
+
+## 🙌 Connect with Me
+
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MuhammedFahizk)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammedfahizk)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/[muhammedfahizk](https://www.linkedin.com/in/muhammed-fahiz-k/))
+[![WhatsApp](https://img.shields.io/badge/Chat-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919961130563)
