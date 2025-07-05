@@ -24,7 +24,7 @@ export const HomeLeft = () => {
   const words = text.split(" ");
 
   return (
-    <div className=" bgPattern text-center font-Nunito h-full md:h-fit w-full lg:mx-9 md:mx-0 py-4 px-6 rounded-xl shadow-2xl md:bottom-0 md:relative z-50 md:text-left space-y-1.5 md:space-y-2 bg-white/0 dark:bg-white/0 backdrop-blur-sm  ">
+    <div className=" bgPattern text-center font-Nunito h-full md:h-fit w-full lg:mx-9 md:mx-0 py-4 md:px-6 rounded-xl shadow-2xl md:bottom-0 md:relative z-50 md:text-left space-y-1.5 md:space-y-2 bg-white/0 dark:bg-white/0 backdrop-blur-sm  ">
       <div className=" opacity-55 text-center">
         <p className="text-lg dark:text-white text-gray-700 md:dark:text-gray-400">
           Hi, My Name Is

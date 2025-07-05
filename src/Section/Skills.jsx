@@ -116,8 +116,8 @@ export const Skills = () => {
     tl.fromTo(
       track,
       {
-        y: isMobile ? -570 : -610,
-        x: isMobile ? 25 : 290,
+        y: isMobile ? -630 : -610,
+        x: isMobile ? 35 : 290,
       },
       {
         y: 0,

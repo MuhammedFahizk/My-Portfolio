@@ -70,7 +70,7 @@ const Home = () => {
   }, [imageLoaded]);
 
   return (
-    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-20 items-center justify-center px-4 lg:px-20">
+    <div className="bgPattern home  w-full flex flex-col  gap-0  relative md:grid md:grid-cols-2 py-10 items-center justify-center px-4 lg:px-20 min-h-[600px]">
       <HomeLeft />
 
       <div>

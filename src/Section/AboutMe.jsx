@@ -25,7 +25,7 @@ export const AboutMe = () => {
     );
   }, []);
   return (
-    <div className="about z-10 bg-lightS dark:bg-darkS  overflow-hidden rounded-4xl rotate-0 grid grid-cols-1 md:grid-cols-5 gap-6 p-6 md:p-10 min-h-[500px]">
+    <div className="about z-10 bg-lightS  dark:bg-darkS  overflow-hidden rounded-4xl rotate-0 grid grid-cols-1 md:grid-cols-5 gap-6 p-6 md:p-10 min-h-[500px]">
       {/* Left Section: Heading */}
       <div className="col-span-2 z-50 relative bg-transparent flex opacity-55 flex-col justify-center items-center p-4 md:p-10 h-full">
         <h1 className="text-7xl md:text-7xl lg:text-[11rem] italic font-Acme text-gray-900 dark:text-light  ">
@@ -42,8 +42,8 @@ export const AboutMe = () => {
         </h1>
       </div>
 
-      <div className="col-span-3 flex flex-col justify-center gap-4 p-4 md:p-10 h-full">
-        <p className="text-sm font-Acme flex gap-2 items-center text-primary">
+      <div className="col-span-3 flex text-center md:text-left flex-col justify-center gap-4 p-4 md:p-10 h-full">
+        <p className="text-sm hidden  font-Acme md:flex gap-2 items-center text-primary">
           <HiArrowLongLeft /> About Me
         </p>
 
