@@ -1,12 +1,89 @@
-# React + Vite
+# 💼 Personnel Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vercel](https://vercelbadge.vercel.app/api/MuhammedFahizk/My-Portfolio)](https://fahiz.vercel.app)
+![GitHub last commit](https://img.shields.io/github/last-commit/MuhammedFahizk/My-Portfolio)
+![Repo Size](https://img.shields.io/github/repo-size/MuhammedFahizk/My-Portfolio)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Currently, two official plugins are available:
+A modern, animated personal portfolio built with **React 19**, **Tailwind CSS**, and **GSAP**.  
+It showcases my **MERN stack** skills, featured projects, animations, contact form, and more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Preview
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Portfolio Preview](https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751624299/profile_black-1_nkpjpe.png)
+
+---
+
+## 🌐 Live Demo
+
+🔗 [View Portfolio Live](https://fahiz.vercel.app)
+
+---
+
+## 🚀 Tech Stack
+
+- ⚛️ **React 19**
+- 🌬️ **Tailwind CSS 4.1**
+- 🎞️ **GSAP** (for smooth animations)
+- 📨 **EmailJS** (for sending messages)
+- 🧩 **React Hook Form**
+- 📦 **Vite** (for fast builds)
+- 🧪 **ESLint** (code quality)
+- 🌈 **Flowbite React** (components)
+
+---
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/MuhammedFahizk/My-Portfolio.git
+
+# Navigate into the folder
+cd Personnel_Portfolio
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
+💡 Features
+------------
+🔥 Modern GSAP animations
+
+🌗 Dark/Light mode with localStorage preference
+
+🖼️ Project showcase section
+
+📫 Contact form (with working EmailJS integration)
+
+⚙️ Clean code & ESLint config
+
+💻 Responsive design for all devices
+
+📁 Folder Structure
+bash
+Copy
+Edit
+src/
+│
+├── components/         # Reusable UI components
+├── assets/             # Images, fonts, logos
+├── hooks/              # Custom React hooks
+└── main.jsx            # App entry point
+🔗 Links
+🔥 Live Site
+
+🧠 GitHub Repo
+
+📜 License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
+. 🙌 Connect with Me
+. 🔗 GitHub Profile
+
+💼 LinkedIn
