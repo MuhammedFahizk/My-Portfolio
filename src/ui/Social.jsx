@@ -7,6 +7,8 @@ import {
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -41,6 +43,13 @@ const contactLinks = [
     icon: <FaLinkedin className="text-md text-primary sm:text-xl" />,
     external: true,
   },
+  {
+  href: "https://medium.com/@mohamadshahkhajeh", // Replace with your profile if needed
+  label: "Medium",
+  icon: <FaMedium className="text-md text-primary sm:text-xl" />,
+  external: true,
+},
+  
 ];
 
 export const Social = () => {

@@ -41,6 +41,12 @@ export const Footer = () => {
       icon: <FaLinkedin className="text-md text-primary sm:text-xl" />,
       external: true,
     },
+    {
+      href: "https://medium.com/@fahizk100",
+      label: "Medium",
+      icon: <FaLinkedin className="text-md text-primary sm:text-xl" />,
+      external: true,
+    },
   ];
   return (
     <footer
