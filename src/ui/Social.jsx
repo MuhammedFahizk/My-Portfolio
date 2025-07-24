@@ -44,7 +44,7 @@ const contactLinks = [
     external: true,
   },
   {
-  href: "https://medium.com/@mohamadshahkhajeh", // Replace with your profile if needed
+  href: "https://medium.com/@fahiz100", // Replace with your profile if needed
   label: "Medium",
   icon: <FaMedium className="text-md text-primary sm:text-xl" />,
   external: true,
