@@ -82,7 +82,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-4">
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="https://drive.google.com/file/d/1QwGigzV3-Hm4cpVbU6_YvnXgYPZnJbwp/view?usp=sharing"
+                  href="https://res.cloudinary.com/dnqx8sqdw/image/upload/v1772621333/Muhammed_Fahiz-Resume_qb2n4g.pdf"
                   download
                   rel="noopener noreferrer"
                   target="_blank"
@@ -121,7 +121,7 @@ export const Footer = () => {
             {/* Address */}
             <div className="flex flex-col gap-1 text-center md:text-end">
               <p>Mavoor, Kozhikode, Kerala, India</p>
-              <p>fahizk100@gmail.com</p>
+              <p>fahiz.k.dev@gmail.com</p>
               <p>+91 9961130563</p>
             </div>
           </div>

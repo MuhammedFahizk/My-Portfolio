@@ -153,7 +153,7 @@ function App() {
         <Home />
         <SecondarySection />
         <Portfolio />
-        <Blog/>
+        {/* <Blog/> */}
         <Footer />
       </Suspense>
     </Background>

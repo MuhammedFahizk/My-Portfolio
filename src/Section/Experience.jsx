@@ -10,23 +10,36 @@ export const Experience = () => {
   const cardsRef = useRef([]);
   const projectImageRefs = useRef([]);
 
-  const experiences = [
+const experiences = [
+    {
+      title: "Full-Stack Engineer",
+      company: "Colaber",
+      location: "Remote",
+      duration: "August 2025 – March 2026",
+      details: [
+        "Architected a multi-tenant subscription and billing engine from scratch — pricing plans, add-ons, usage limits, grace periods, and auto-renewals using MongoDB transactions.",
+        "Integrated PhonePe and Cashfree payment gateways through a unified abstraction layer with idempotent webhook processing to prevent duplicate charges.",
+        "Implemented policy-based access control using Open Policy Agent (OPA) with Redis caching — feature-tier rules updated without redeploying the app.",
+        "Built a secure AWS media pipeline: S3 upload → MediaConvert (HLS) → CloudFront delivery with JWT-signed cookies validated at the edge via Lambda@Edge.",
+        "Implemented JWT authentication with refresh token rotation, hashed token storage, multi-session handling, and instant session invalidation.",
+        "Built and maintained React/Next.js frontend components for subscription dashboards, media players, and onboarding flows using Tailwind CSS.",
+      ],
+    },
     {
       title: "MERN Stack Developer Intern",
       company: "SelfStack",
       location: "Kozhikode, Kerala",
-      duration: "August 2023 – December 2024",
+      duration: "August 2023 – September 2024",
       details: [
-        "Developed 30+ mini projects and 2 major projects using the MERN stack.",
-        "Optimized RESTful APIs, reducing response times by 30%.",
-        "Implemented JWT authentication & refresh tokens for secure access management.",
-        "Reduced API calls by 40% using Redux Toolkit, improving performance.",
-        "Integrated CI/CD pipelines with Docker & GitHub Actions for automated deployments.",
-        "Collaborated with designers, QA engineers, and DevOps to ensure seamless feature rollouts.",
+        "Built 30+ projects and 2 full-scale MERN applications across the complete development lifecycle.",
+        "Improved MongoDB API response times by ~30% through query indexing and aggregation pipeline optimization.",
+        "Reduced redundant API calls by ~40% using Redux Toolkit caching strategies across React frontends.",
+        "Implemented JWT authentication and role-based access control from scratch across multiple projects.",
+        "Set up GitHub Actions CI/CD pipelines for automated deployments, eliminating manual release overhead.",
+        "Collaborated with designers, QA engineers, and DevOps to deliver stable, production-ready features.",
       ],
     },
   ];
-
   useGSAP(() => {
     const isMobile = window.innerWidth < 768;
 
@@ -78,13 +91,14 @@ export const Experience = () => {
       className="relative bg-lightS dark:bg-darkS rounded-4xl overflow-hidden py-10 px-4 md:px-10"
     >
       {/* Background Label */}
-      <h1 className="absolute inset-0 flex justify-center items-start text-gray-700/10 dark:text-white/10 text-[5rem] md:text-[7rem] font-Bubblegum opacity-10 -rotate-90 select-none pointer-events-none z-0">
+      <h1 className="absolute left-56 inset-0 flex justify-center items-start text-gray-700/10 dark:text-white/10 text-[5rem] md:text-[7rem] font-Bubblegum opacity-10 -rotate-90 select-none pointer-events-none z-0">
         EXPERIENCE
       </h1>
 
       <div className="relative w-full flex flex-col md:flex-row justify-between items-center gap-10 z-10">
         <div className="w-full md:w-1/3 hidden md:flex flex-col items-center justify-start gap-6 relative">
           {[
+            "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1772620962/Screenshot_2026-03-04_160638_z8mzpm.png",
             "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703437/SpotifyClone_zrg7bi.png",
             "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703408/DriveWave_bhbe0n.png",
             "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703389/ChatHive_wgtmkf.png",

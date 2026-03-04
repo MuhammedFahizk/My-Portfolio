@@ -6,7 +6,7 @@ export const Nav = () => {
  const navLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammed-fahiz-k/' },
   { name: 'GitHub', href: 'https://github.com/MuhammedFahizk' },
-  { name: 'Download Resume', href: 'https://drive.google.com/file/d/1QwGigzV3-Hm4cpVbU6_YvnXgYPZnJbwp/view?usp=sharing' },
+  { name: 'Download Resume', href: 'https://res.cloudinary.com/dnqx8sqdw/image/upload/v1772621333/Muhammed_Fahiz-Resume_qb2n4g.pdf' },
 ];
 
 

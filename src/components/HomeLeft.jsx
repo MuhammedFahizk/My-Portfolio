@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { FaDownload, FaEnvelopeOpenText } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import { BiPhoneCall } from "react-icons/bi";
 
 export const HomeLeft = () => {
@@ -17,9 +17,7 @@ export const HomeLeft = () => {
     });
   }, []);
 
-  const text = `I'm a passionate MERN Stack Developer with hands-on experience in
-  building scalable web applications, optimizing performance, and
-  creating seamless user experiences`;
+  const text = `Full-Stack Engineer with production SaaS experience — building subscription systems, payment integrations, and cloud infrastructure on the MERN stack.`;
 
   const words = text.split(" ");
 
@@ -29,41 +27,43 @@ export const HomeLeft = () => {
         <p className="text-lg dark:text-white text-gray-700 md:dark:text-gray-400">
           Hi, My Name Is
         </p>
-        <h1 className="font-Acme text-5xl sm:text-7xl text-gray-900  dark:text-light">
-          M- Fahiz K
+        <h1 className="font-Acme text-5xl sm:text-7xl text-gray-900 dark:text-light">
+          Fahiz K
         </h1>
-        <p className="   text-center px-2 md:block  dark:text-white text-gray-500/90 font-Nunito md:text-gray-700 md:dark:text-gray-400 flex flex-wrap justify-center md:justify-start gap-x-1">
+        <p className="text-base dark:text-white text-gray-700 font-semibold tracking-wide">
+          Full-Stack Engineer · MERN Stack
+        </p>
+        <p className="text-center px-2 md:block dark:text-white text-gray-500/90 font-Nunito md:text-gray-700 md:dark:text-gray-400 flex flex-wrap justify-center md:justify-start gap-x-1">
           {words.map((word, i) => (
             <span
               key={i}
               ref={(el) => (wordRefs.current[i] = el)}
               className="inline-block"
             >
-              {word} &nbsp;
+              {word}&nbsp;
             </span>
           ))}
         </p>
       </div>
 
-      <div className="flex gap-2 py-2  justify-center  flex-wrap">
-        <a
-
-          href="https://drive.google.com/file/d/1QwGigzV3-Hm4cpVbU6_YvnXgYPZnJbwp/view?usp=sharing"
+      <div className="flex gap-2 py-2 justify-center flex-wrap">
+        
+         <a 
+          href="https://res.cloudinary.com/dnqx8sqdw/image/upload/v1772621333/Muhammed_Fahiz-Resume_qb2n4g.pdf"
           download
           rel="noopener noreferrer"
           target="_blank"
-
-          className=" hero flex items-center text-sm gap-2 md:px-6  px-3 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-100"
+          className="hero flex items-center text-sm gap-2 md:px-6 px-3 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-100"
         >
           <FaDownload className="text-lg" />
           Download CV
         </a>
 
-        <a
+        <a 
           href="tel:9961130563"
-            rel="noopener noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
-          className="  flex items-center gap-2 text-sm  px-3 md:px-6 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300  active:scale-100"
+          className="flex items-center gap-2 text-sm px-3 md:px-6 py-3 rounded-full bg-white/10 dark:bg-white/10 text-gray-900/30 dark:text-gray-100/60 backdrop-blur-xl border border-black/30 dark:border-white/30 shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-100"
         >
           <BiPhoneCall className="text-lg" />
           Contact Me

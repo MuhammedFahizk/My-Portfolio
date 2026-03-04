@@ -23,74 +23,74 @@ export const Skills = () => {
 
   const skills = [
     {
-      title: "Full-Stack Web Development",
+      title: "Full-Stack Development",
       description:
-        "Built end-to-end applications using MongoDB, Express, React, and Node.js following MVC architecture.",
+        "Built production SaaS applications end-to-end using MongoDB, Express, React, and Node.js — from database schema to deployed UI.",
       color: "#9e0142",
       icon: <FaCode />,
     },
     {
-      title: "Real-time Communication",
+      title: "Subscription & Billing Systems",
       description:
-        "Implemented real-time chat, notifications, and typing indicators using Socket.IO.",
+        "Architected a multi-tenant billing engine from scratch — pricing plans, add-ons, usage limits, grace periods, and auto-renewals using MongoDB transactions.",
       color: "#d53e4f",
-      icon: <FaComments />,
-    },
-    {
-      title: "Authentication & Security",
-      description:
-        "Used JWT and refresh tokens to manage authentication and role-based authorization securely.",
-      color: "#f46d43",
-      icon: <FaLock />,
-    },
-    {
-      title: "Responsive UI/UX Design",
-      description:
-        "Created mobile-first responsive interfaces using Tailwind CSS and component libraries.",
-      color: "#fdae61",
-      icon: <FaMobileAlt />,
-    },
-    {
-      title: "API Integration",
-      description:
-        "Integrated third-party APIs like Spotify for data retrieval and dynamic content rendering.",
-      color: "#fee08b",
-      icon: <FaPlug />,
-    },
-    {
-      title: "Admin Dashboard & Role Management",
-      description:
-        "Developed admin tools for user/content moderation and data visualization.",
-      color: "#e6f598",
-      icon: <FaTools />,
+      icon: <FaProjectDiagram />,
     },
     {
       title: "Payment Gateway Integration",
       description:
-        "Integrated Razorpay to enable secure payment processing for service-based apps.",
-      color: "#abdda4",
+        "Integrated PhonePe, Cashfree, and Razorpay with idempotent webhook processing to prevent duplicate charges across async payment flows.",
+      color: "#f46d43",
       icon: <FaMoneyCheckAlt />,
     },
     {
-      title: "State Management",
+      title: "Authentication & Security",
       description:
-        "Handled global app state using Redux Toolkit and React Context for scalable architecture.",
-      color: "#66c2a5",
-      icon: <FaProjectDiagram />,
+        "Implemented JWT with refresh token rotation, hashed token storage, multi-session handling, and instant session invalidation on demand.",
+      color: "#fdae61",
+      icon: <FaLock />,
     },
     {
-      title: "Code Quality & Reusability",
+      title: "Policy-Based Authorization",
       description:
-        "Maintained clean and consistent code using ESLint and reusable component patterns.",
-      color: "#3288bd",
-      icon: <FaCheckCircle />,
+        "Built feature-level access control using Open Policy Agent (OPA) with Redis caching — subscription-tier rules updated without redeploying the app.",
+      color: "#fee08b",
+      icon: <FaTools />,
     },
     {
-      title: "Version Control & Deployment",
+      title: "Cloud Media Pipeline",
       description:
-        "Used Git & GitHub for version control, and deployed apps on Vercel and custom domains.",
-      color: "#5e4fa2",
+        "Designed a secure AWS pipeline: S3 upload → MediaConvert (HLS transcoding) → CloudFront delivery with JWT-signed cookies validated via Lambda@Edge.",
+      color: "#e6f598",
       icon: <FaCloudUploadAlt />,
+    },
+    {
+      title: "Real-Time Communication",
+      description:
+        "Built reliable Socket.IO messaging where events are acknowledged only after confirmed DB writes — no ghost messages or lost events.",
+      color: "#abdda4",
+      icon: <FaComments />,
+    },
+    {
+      title: "API Design & Optimization",
+      description:
+        "Designed clean REST APIs and improved MongoDB query performance by ~30% through indexing, aggregation pipelines, and query restructuring.",
+      color: "#66c2a5",
+      icon: <FaPlug />,
+    },
+    {
+      title: "State Management & Frontend",
+      description:
+        "Built React and Next.js frontends with Redux Toolkit — reduced redundant API calls by ~40% using built-in caching strategies.",
+      color: "#3288bd",
+      icon: <FaMobileAlt />,
+    },
+    {
+      title: "CI/CD & Deployment",
+      description:
+        "Set up GitHub Actions pipelines for automated deployments. Managed AWS EC2 servers with Nginx reverse proxy, SSL, and PM2 process management.",
+      color: "#5e4fa2",
+      icon: <FaCheckCircle />,
     },
   ];
 

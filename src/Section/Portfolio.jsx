@@ -3,17 +3,49 @@ import { Project } from "../ui/Index";
 import { PiGithubLogoThin } from "react-icons/pi";
 
 export const Portfolio = () => {
-  const projects = [
+const projects = [
+    {
+      title: "Colaber",
+      subtitle: "Business Automation SaaS Platform",
+      image:
+        "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1772620962/Screenshot_2026-03-04_160638_z8mzpm.png", // replace with a Colaber screenshot when available
+      description:
+        "Worked as a Full-Stack Engineer on a production SaaS platform for business automation. Owned the entire backend infrastructure — from billing and payments to cloud media delivery and authorization — while also building the React/Next.js frontend.",
+      responsibilities: [
+        "Architected a multi-tenant subscription and billing engine — plans, add-ons, usage limits, grace periods, and auto-renewals using MongoDB transactions",
+        "Integrated PhonePe and Cashfree payment gateways with idempotent webhook processing to prevent duplicate charges",
+        "Built policy-based access control using Open Policy Agent (OPA) with Redis caching — feature rules updated without redeployment",
+        "Designed a secure AWS media pipeline: S3 → MediaConvert (HLS) → CloudFront with JWT-signed cookies validated via Lambda@Edge",
+        "Implemented JWT authentication with refresh token rotation, hashed storage, multi-session handling, and instant invalidation",
+        "Built React/Next.js frontend components for subscription dashboards, media players, and onboarding flows",
+      ],
+      technologies: [
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Redis",
+        "AWS S3",
+        "CloudFront",
+        "PhonePe",
+        "Cashfree",
+        "OPA",
+        "Tailwind CSS",
+      ],
+      links: {
+        demo: null,
+        repo: null,
+      },
+    },
     {
       title: "Chat Hive",
       subtitle: "A Social Media Application",
       image:
         "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703389/ChatHive_wgtmkf.png",
       description:
-        "Built a full-featured social media application using the MERN stack with real-time chat using Socket.IO. Focused on responsive UI, intuitive user interactions, and role-based access control with JWT.",
+        "Built a full-featured social media application using the MERN stack with real-time chat using Socket.IO. Messages are acknowledged only after confirmed DB writes — no ghost messages. Focused on responsive UI, intuitive user interactions, and role-based access control with JWT.",
       responsibilities: [
-        "Implemented real-time messaging and notifications with Socket.IO",
-        "Developed secure authentication using JWT with role-based access",
+        "Implemented reliable real-time messaging with Socket.IO — events acknowledged only after confirmed DB writes",
+        "Developed secure JWT authentication with role-based access control",
         "Built reusable UI components with React and Tailwind CSS",
         "Managed posts, likes, blogs, comments, and content moderation",
         "Admin dashboard for managing users, posts, reports, and analytics",
@@ -37,43 +69,25 @@ export const Portfolio = () => {
       image:
         "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703408/DriveWave_bhbe0n.png",
       description:
-        "Designed and developed a car rental platform using Handlebars for the frontend and a Node.js backend with Razorpay integration. Supports user bookings and third-party vendor listings.",
+        "Designed and developed a full car rental platform with booking workflows, Razorpay payment integration, and a self-managed AWS EC2 deployment with Nginx reverse proxy and SSL.",
       responsibilities: [
-        "Built a multi-role system for users, admins, and vendors",
+        "Built a three-tier RBAC system for customers, vendors, and admins with separate views and API access",
         "Integrated Razorpay for secure online payments",
         "Designed backend using MVC architecture with Express and MongoDB",
-        "Enabled third-party car listing and management features",
+        "Deployed on AWS EC2 with Nginx reverse proxy, SSL configuration, and PM2 process management",
       ],
-      technologies: ["Node.js", "MongoDB", "Express", "Razorpay", "Handlebars"],
+      technologies: [
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Razorpay",
+        "AWS EC2",
+        "Nginx",
+        "Handlebars",
+      ],
       links: {
         demo: "https://www.drivewave.site/",
         repo: "https://github.com/MuhammedFahizk/drive-Wave",
-      },
-    },
-    {
-      title: "Spotify Clone",
-      subtitle: "A Music Streaming Application",
-      image:
-        "https://res.cloudinary.com/dnqx8sqdw/image/upload/v1751703437/SpotifyClone_zrg7bi.png",
-      description:
-        "Created a responsive Spotify clone using React with Spotify API integration. Included user authentication, custom playlist management, and seamless audio experience.",
-      responsibilities: [
-        "Integrated Spotify API for track, album, and artist retrieval",
-        "Built a custom backend with JWT auth and refresh token handling",
-        "Managed user playlists using MongoDB",
-        "Focused on UX and responsive UI using Tailwind CSS",
-      ],
-      technologies: [
-        "Spotify API",
-        "React",
-        "Tailwind CSS",
-        "Node.js",
-        "Express",
-        "MongoDB",
-      ],
-      links: {
-        demo: "https://track-me-demo.com",
-        repo: "https://github.com/MuhammedFahizk/TrackVoice",
       },
     },
   ];
