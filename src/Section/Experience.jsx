@@ -88,7 +88,7 @@ const experiences = [
   return (
     <div
       ref={ExpcontainerRef}
-      className="relative bg-lightS dark:bg-darkS rounded-4xl overflow-hidden py-10 px-4 md:px-10"
+      className="relative bg-lightS  dark:bg-darkS rounded-4xl overflow-hidden py-10 px-4 md:px-10"
     >
       {/* Background Label */}
       <h1 className="absolute left-56 inset-0 flex justify-center items-start text-gray-700/10 dark:text-white/10 text-[5rem] md:text-[7rem] font-Bubblegum opacity-10 -rotate-90 select-none pointer-events-none z-0">
